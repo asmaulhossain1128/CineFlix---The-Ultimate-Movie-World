@@ -1,3 +1,4 @@
+import { useDebounce } from "react-use";
 import { useEffect, useState } from "react";
 import HeroBG from "../public/hero.png";
 import Search from "./components/Search";
@@ -19,6 +20,16 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [movieList, setMovieList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [debounceSearchTerm, setDebounceSearchTerm] = useState("");
+
+  // Waiting for 1 second before making the API call
+  useDebounce(
+    () => {
+      setDebounceSearchTerm(searchTerm);
+    },
+    1000,
+    [searchTerm]
+  );
 
   const fetchMovies = async (query = "") => {
     setErrorMessage("");
@@ -53,8 +64,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchMovies(searchTerm);
-  }, [searchTerm]);
+    fetchMovies(debounceSearchTerm);
+  }, [debounceSearchTerm]);
 
   return (
     <main>
