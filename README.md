@@ -30,4 +30,4 @@
 Check out the live version of the project here:  
 [**CineFlix Live Demo**](https://cineflix-nxtflare.vercel.app/)
 
-![CineFlix](https://your-image-link.com) 
+![CineFlix](https://raw.githubusercontent.com/asmaulhossain1128/CineFlix---The-Ultimate-Movie-World/refs/heads/main/public/CineFlix%20Design.png) 
