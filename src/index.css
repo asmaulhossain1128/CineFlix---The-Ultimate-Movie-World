@@ -140,6 +140,10 @@
       @apply text-gray-100 font-medium text-base;
     }
   }
+
+  .movie-card:hover {
+    @apply bg-indigo-100/10 transition-all duration-200;
+  }
 }
 
 @utility text-gradient {
