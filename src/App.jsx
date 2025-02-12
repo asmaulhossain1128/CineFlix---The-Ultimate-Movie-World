@@ -86,8 +86,6 @@ const App = () => {
     fetchTrendingMovies();
   }, []);
 
-  console.log(trendingMovies);
-
   return (
     <main>
       <div className="pattern" />
